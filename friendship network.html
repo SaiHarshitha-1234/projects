@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friendship</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            width: 100%;
+            background-color: #007BFF;
+            padding: 10px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .navbar-menu li {
+            margin: 0 10px;
+        }
+
+        .navbar-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Welcome Container Styles */
+        .welcome-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px;
+        }
+
+        .welcome-container h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #007BFF;
+        }
+
+        .welcome-container p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #007BFF;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .head{
+            color: #007BFF;
+            font-weight: 400;
+            font-size: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="head">
+        Friendship 
+    </div>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="navbar-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="registration.html">Login/Register</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="welcome-container">
+        <h1>Welcome to the Friendship Network</h1>
+        <p>Connecting friends all over the world. Join us to share your experiences and make new friends.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Friendship Network. All rights reserved.</p>
+    </footer>
+</body>
+</html>

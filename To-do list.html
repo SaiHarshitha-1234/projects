@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title >To-do List</title>
+<style>
+.todos-bg-container {
+background-color: #fd27f6;
+height: 100vh;
+color:white;
+text-align: center;
+background-size: cover;
+font-family: "Roboto";
+}
+.todos-heading {
+font-size: 46px;
+font-weight: 500;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+.create-task-heading {
+font-size: 32px;
+font-weight: 700;
+}
+.li-item{
+list-style-type:disc;
+margin-right: 100px;
+padding: 0;
+text-align: left;
+font-size: 24px;
+}
+.todo-items-heading {
+font-size: 32px;
+font-weight: 700;
+}
+.todo-user-input {
+background-color: white;
+width: 80%;
+border-style: solid;
+border-width: 1px;
+border-color: #e4e7eb;
+border-radius: 10px;
+margin-top: 10px;
+margin-right: 5px;
+padding: 15px;
+}
+.checked{
+text-decoration: line-through;
+}
+.add-todo-button {
+color: white;
+background-color: #4c63b6;
+font-family: "Roboto";
+font-size: 18px;
+border-width: 0;
+border-radius: 4px;
+margin-top: 20px;
+margin-left:10px;
+margin-bottom: 50px;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 20px;
+padding-left: 20px;
+}
+</style>
+</head>
+<body>
+<div class="todos-bg-container">
+<h1 class="todos-heading" style="color: darkgreen;">To-do list </h1>
+<h1 class="create-task-heading">
+Create Tasks
+</h1>
+<input type="text" id="todoUserInput" class="todo-user-input" placeholder="Add your tasks here" />
+<button class="add-todo-button" id="addTodoButton">Add</button>
+<h1 class="todo-items-heading">
+My Tasks
+</h1>
+<ul id="todoItemsContainer"></ul>
+<button class="add-todo-button" id="clearCompletedBtn">Clear Completed
+Tasks</button>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(document).ready(function() {
+$('#addTodoButton').click(function() {
+var taskName = $('#todoUserInput').val();
+if (taskName.trim() !== '') {
+var listItem = $('<li>').addClass('li-item').text(taskName);
+var removeButton = $('<button>').text('Remove').addClass('add-todo-button').click(function() {
+$(this).parent().remove();
+});
+var completeButton = $('<button>').text('Complete').addClass('add-todo-button').click(function()
+{
+$(this).parent().addClass('checked').toggleClass('completed');
+});
+listItem.append(removeButton).append(completeButton);
+$('#todoItemsContainer').append(listItem);
+$('#todoUserInput').val('');
+}
+});
+$('#clearCompletedBtn').click(function() {
+$('.completed').remove();
+});
+});
+</script>
+</body>
+</html>

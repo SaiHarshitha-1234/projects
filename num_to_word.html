@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Number to Words Conversion</title>
+    <style>
+        body{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: ghostwhite;
+            height: 100vh;
+        }
+        #container{
+            text-align: center;
+        }
+        input[type="text"]{
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid green;
+            border-radius: 5px;
+        }
+        #result{
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 style="color: darkorange;">CONVERSION</h1>
+       <h2 style="color: darkblue;">Number to Words Format</h2>
+       <input type="text" id="numberInput" placeholder="Enter a number(0-999)">
+       <div id="result"></div>
+    </div>
+   <script>
+        document.getElementById('numberInput').addEventListener('input', function() {
+            let number = this.value.trim();
+            let resultDiv = document.getElementById('result');
+            let words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
+                         'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+            let tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+
+            if (number.match(/^\d+$/) && number >= 0 && number <= 999) {
+                let numInWords = '';
+                if (number >= 100) {
+                    numInWords += words[Math.floor(number / 100)] + ' hundred ';
+                    number %= 100;
+                }
+                if (number >= 20) {
+                    numInWords += tens[Math.floor(number / 10)] + ' ';
+                    number %= 10;
+                }
+                if (number > 0 || numInWords === '') {
+                    numInWords += words[number];
+                }
+                resultDiv.textContent = 'In words: ' + numInWords;
+            } else {
+                resultDiv.textContent = 'Please enter a valid number between 0 and 999.';
+            }
+        });
+    </script>
+
+</body>
+</html>
