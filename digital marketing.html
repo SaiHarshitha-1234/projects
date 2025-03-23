@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Digital Marketing Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            background-color: #333;
+            color: white;
+        }
+        .navbar img {
+            height: 50px;
+        }
+        .cover-page {
+            background: url('cover-image.jpg') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+        }
+        .two-layout, .three-layout {
+            display: flex;
+            justify-content: space-around;
+            padding: 2em;
+        }
+        .two-layout .content, .two-layout .image, .three-layout .package {
+            flex: 1;
+            padding: 1em;
+        }
+        .two-layout .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        .social-links a {
+            margin: 0 1em;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar with Logo -->
+    <div class="navbar">
+        <img src="logo.png" alt="Company Logo">
+        <nav>
+            <a href="#home" style="color:white;">Home</a>
+            <a href="#services" style="color:white;">Services</a>
+            <a href="#contact" style="color:white;">Contact</a>
+        </nav>
+    </div>
+    <!-- Branding Cover Page -->
+    <div class="cover-page">
+        <div>Welcome to Our Digital Marketing Agency</div>
+    </div>
+
+    <!-- 2-Layout Section with Content and Image -->
+    <div class="two-layout">
+        <div class="content">
+            <h2>Our Mission</h2>
+            <p>We aim to deliver top-notch digital marketing services that help businesses grow and succeed in the online world.</p>
+        </div>
+        <div class="image">
+            <img src="mission-image.jpg" alt="Mission Image">
+        </div>
+    </div>
+
+    <!-- 3-Layout Section with packages or pricing details -->
+    <div class="three-layout">
+        <div class="package">
+            <h3>Basic Plan</h3>
+            <p>$99/month</p>
+            <p>Basic digital marketing services including social media management and SEO.</p>
+        </div>
+        <div class="package">
+            <h3>Standard Plan</h3>
+            <p>$199/month</p>
+            <p>Standard digital marketing services with additional content creation and PPC management.</p>
+        </div>
+        <div class="package">
+            <h3>Premium Plan</h3>
+            <p>$299/month</p>
+            <p>All-inclusive digital marketing services with advanced analytics and custom strategies.</p>
+        </div>
+    </div>
+
+    <!-- Iframes showing previous works -->
+    <div style="padding: 2em;">
+        <h2>Our Previous Works</h2>
+        <iframe src="https://www.example.com" width="300" height="200" style="border: 1px solid #333;"></iframe>
+        <iframe src="https://www.example.com" width="300" height="200" style="border: 1px solid #333;"></iframe>
+        <iframe src="https://www.example.com" width="300" height="200" style="border: 1px solid #333;"></iframe>
+    </div>
+
+    <!-- Footer with COMPANY Details and Social links -->
+    <div class="footer">
+        <p>&copy; 2024 Digital Marketing Agency. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</body>
+</html>
